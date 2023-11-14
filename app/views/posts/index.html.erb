@@ -1,0 +1,53 @@
+<div class="container">
+    <div class ="page_title">
+        <h2>
+            予定一覧
+        </h2>
+        <% if flash[:notice] && flash[:notice] != "予定の登録に失敗しました" && flash[:notice] != "予定の更新に失敗しました"%>
+            <p class="flash_message black_notice"><%= flash[:notice] %></p>
+        <% end %>
+        <button class="blue">
+            <%= link_to "＋ 新規追加", :new_post %>
+        </button>
+    </div>
+
+    <table class="list">
+        <tr>
+            <th>ID</th>
+            <th>タイトル</th>
+            <th>開始日</th>
+            <th>終了日</th>
+            <th>終日</th>
+            <th>更新日時</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        <% @posts.each do |post| %>
+        <tr>
+            <td><%= post.id %></td>
+            <td><%= post.title %></td>
+            <td><%= post.start_day.strftime("%Y/%m/%d") %></td>
+            <td><%= post.end_day.strftime("%Y/%m/%d") %></td>
+            <td>
+                <% if post.all_day %>
+                    ○
+                <% end %>
+            </td>
+            <td><%= post.updated_at.strftime("%Y/%m/%d %H:%M") %></td>
+            <td><%= link_to "詳細", post %></td>
+            <td><%= link_to "編集", [:edit, post] %></td>
+            <td><%= link_to "削除", post, method: :delete, data: {confirm: "予定を削除しますか？" } %>
+            </td>
+        </tr>
+        <% end %>
+    </table>
+
+    <div class ="footer">
+        <p>予定合計 <%= Post.all.count %>件</p>
+        <p>本日の日付 <%= Date.current.strftime("%Y/%m/%d") %></p>
+    </div>
+</div>
+
+

@@ -1,0 +1,165 @@
+body {
+    margin: 0px;
+    background-color: rgb(252, 248, 248);
+}
+
+header {
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+// topページ
+.container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.page_title{
+    position: relative;
+    top:20px;
+    display:flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+.list {
+    position: relative;
+    top:40px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 2px 2px 4px gray;
+    border-collapse: collapse;
+}
+
+.list th {
+    border-bottom: 0.5px solid rgb(216, 211, 211);
+    padding: 10px;
+    text-align: left;
+}
+
+.list td {
+    padding: 20px 10px;
+    border-bottom: 0.5px solid rgb(216, 211, 211);
+}
+.footer {
+    position: relative;
+    top: 80px;
+    background-color: white;
+    box-shadow: 2px 2px 4px gray;
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+}
+
+// 編集ページ
+.form_container{
+    width: 600px;
+    margin: 0 auto;
+}
+
+.form_title{
+    width: 620px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 10px;
+}
+
+.form {
+    font-size: 14px;
+    background-color: white;
+    width: 100%;
+    text-align: left;
+    box-shadow: 2px 2px 4px gray;
+    padding: 10px;
+}
+
+.footer_button{
+    text-align: right;
+    position: relative;
+}
+
+// 詳細ページ
+.input{
+    width: 78%;
+    padding:15px 10px;
+}
+
+.column{
+    background-color: rgb(229, 223, 223);
+    padding:15px 10px;
+}
+
+.data, .input, .column{
+    border: 1px solid;
+    border-collapse:collapse;
+}
+
+// フラッシュメッセージ
+.flash_message {
+    color: white;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px gray;
+}
+
+.red_notice {
+    background-color: red;
+    margin-top: 20px;
+    position: relative;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.black_notice {
+    background-color: black;
+}
+
+// ボタン
+button,input[type="submit"]{
+    border-radius: 5px;
+    padding: 12px 20px;
+    font-weight: bold;
+    border: none;
+    height: 45px;
+}
+
+.blue,input[type="submit"]{
+    background-color: blue;
+    color: white;
+}
+
+.blue a {
+    color: white;
+}
+
+.white{
+    background-color: white;
+    border: 0.1px solid;
+}
+
+.white a {
+    color:black;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+}
+
+
