@@ -1,0 +1,36 @@
+<div class ="form_container">
+    <p>
+        <%= link_to "← 一覧に戻る", :posts %>
+    </p>
+
+    <div class ="form_title">
+        <h2><%= @post.title %></h2>
+        <button class="white"><%= link_to "編集", [:edit, @post] %></button>
+    </div>
+
+    <div class = "form">
+        
+        <table class="data">
+            <tr>
+                <th class="column">開始日</th>
+                <td class="input"><%= @post.start_day %></td>
+            </tr>
+            <tr>
+                <th class="column">終了日</th>
+                <td class="input"><%= @post.end_day %></td>
+            </tr>
+            <tr>
+                <th class="column">終日</th>
+                <td class="input">
+                    <% if @post.all_day %>
+                        ○
+                    <% end %>
+                </td>
+            </tr>
+            <tr>
+                <th class="column">スケジュールメモ</th>
+                <td class="input"><%= @post.memo %></td>
+            </tr>
+        </table>
+    </div>
+</div>
