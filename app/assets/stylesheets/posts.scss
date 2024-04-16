@@ -138,6 +138,7 @@ button,input[type="submit"]{
     font-weight: bold;
     border: none;
     height: 45px;
+    cursor: pointer;
 }
 
 .blue,input[type="submit"]{
@@ -156,10 +157,6 @@ button,input[type="submit"]{
 
 .white a {
     color:black;
-}
-
-input[type="submit"]{
-    cursor: pointer;
 }
 
 

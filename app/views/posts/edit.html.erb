@@ -30,7 +30,9 @@
         </table>
 
         <div class = "footer_button">
-            <button class="white" type="button"><%= link_to "キャンセル", :posts %></button>
+            <%= link_to :posts do %>
+            <button class="white" type="button">キャンセル</button>
+            <% end %>
             <%= f.submit "保存" %>
         </div>
         <% end %>

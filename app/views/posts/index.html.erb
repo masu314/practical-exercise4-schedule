@@ -6,9 +6,11 @@
         <% if flash[:notice] && flash[:notice] != "予定の登録に失敗しました" && flash[:notice] != "予定の更新に失敗しました"%>
             <p class="flash_message black_notice"><%= flash[:notice] %></p>
         <% end %>
+        <%= link_to :new_post do %>
         <button class="blue">
-            <%= link_to "＋ 新規追加", :new_post %>
+            ＋ 新規追加
         </button>
+        <% end %>
     </div>
 
     <table class="list">
